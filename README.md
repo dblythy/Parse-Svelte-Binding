@@ -1,38 +1,32 @@
-# create-svelte
+# Parse Svelte Binding
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+## About
 
-If you're seeing this, you've probably already done this step. Congrats!
+The project demos how to use the upcoming Parse JS feature [bind](https://github.com/parse-community/Parse-SDK-JS/pull/1484).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Binding allows all Parse Objects' properties to be accessed via `object.bind.key`, instead of `object.get('key')`.
 
-# create a new project in my-app
-npm create svelte@latest my-app
+This allows for convienient two-way binding directly to elements such as inputs with `bind:value={object.bind.key}`.
+
+Configure Parse applicationId and serverURL in [src/main.js](src/parse.js)
+
+## Project setup
+```
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+### Compiles and hot-reloads for development
+```
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+### Testing on other projects
 
-To create a production version of your app:
 
-```bash
-npm run build
+To use Bind Notation on your project, install the branch with:
+
+```
+npm i dblythy/Parse-SDK-JS#dot-notation
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
